@@ -1,0 +1,446 @@
+@charset 'utf-8';
+
+// bower:scss
+// endbower
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@import 'font-awesome';
+
+@include foundation-everything(true);
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+$green-border: #50c795;
+$green-back: rgba(53, 210, 147, .9);
+$blue-border: #3ab0e2;
+$blue-back: rgba(58, 176, 226, .9);
+$yellow-border: #ffc95c;
+$ultra-light-gray: #f5f5f5;
+$ultra-dark-gray: #1b1716;
+$shadow-border: rgba($black, .5);
+$products-gray: #e5e5e5;
+$livesoccer: #f60;
+$phune: #1b1464;
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+footer {
+  font-family: 'Whitney Narrow SSm A', 'Whitney Narrow SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.button {
+  font-weight: 500;
+}
+
+address {
+  font-style: normal;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+@include breakpoint(medium) {
+  .lead {
+    // font-size: $global-font-size * 1.25;
+  }
+}
+
+// Headings
+header {
+  color: $body-font-color;
+
+  a {
+    text-transform: uppercase;
+  }
+
+  .sticky {
+    background-color: $white;
+    box-shadow: 0 0 10px $shadow-border;
+    // box-shadow: 0 5px 5px -5px $shadow-border;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .top-bar,
+  .title-bar {
+    @include breakpoint(medium) {
+      .top-bar-title,
+      .title-bar-title {
+        padding: .5rem 0;
+      }
+    }
+  }
+
+  .menu {
+    &.vertical {
+      padding-top: $topbar-padding;
+
+      @include breakpoint(medium) {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+// Block
+.block {
+  padding: rem-calc(20 0);
+}
+
+.block-lg {
+  padding: rem-calc(40 0);
+}
+
+@include breakpoint(medium) {
+  .block {
+    padding: rem-calc(40 0);
+  }
+
+  .block-lg {
+    padding: rem-calc(80 0);
+  }
+}
+
+// Color themes
+.theme {
+  transition: background-color 300ms;
+
+  &.dark-color {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+      color: $black;
+    }
+  }
+
+  &.white-color {
+    color: $white;
+
+    small {
+      color: $white;
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &.light-gray-back {
+    background-color: $ultra-light-gray;
+  }
+
+  &.gray-back {
+    background-color: $products-gray;
+  }
+
+  &.dark-back {
+    background-color: $ultra-dark-gray;
+  }
+
+  &.white-back {
+    background-color: $white;
+  }
+
+  &.green-back {
+    background-color: $green-back;
+  }
+
+  &.blue-back {
+    background-color: $blue-back;
+  }
+
+  &.livesoccer-back {
+    &:hover {
+      background-color: $livesoccer;
+    }
+  }
+
+  &.phune-back {
+    &:hover {
+      background-color: $phune;
+    }
+  }
+}
+
+// Separators
+hr {
+  margin-top: .5rem;
+
+  &.double {
+    border-bottom: 1px solid $light-gray;
+    border-top: 1px solid $light-gray;
+    height: 4px;
+  }
+
+  &.colored {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+
+    &.red-border {
+      border-color: map-get($foundation-palette, alert);
+    }
+
+    &.green-border {
+      border-color: $green-border;
+    }
+
+    &.blue-border {
+      border-color: $blue-border;
+    }
+
+    &.yellow-border {
+      border-color: $yellow-border;
+    }
+  }
+}
+
+// Round elements
+.rounded,
+.rounded-lg {
+  border-radius: 50%;
+}
+
+.rounded {
+  height: rem-calc(96);
+  width: rem-calc(96);
+
+  &.white {
+    border: 4px solid $white;
+  }
+}
+
+@include breakpoint(medium) {
+  .rounded {
+    height: rem-calc(144);
+    width: rem-calc(144);
+
+    &.white {
+      border: 6px solid $white;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.rounded-lg {
+  height: rem-calc(144);
+  width: rem-calc(144);
+
+  &.light-gray {
+    border: 10px solid $light-gray;
+    margin: rem-calc(60 0 30);
+    transition: border-color 300ms;
+
+    &.red-border {
+      &:hover {
+        border-color: map-get($foundation-palette, alert);
+      }
+    }
+
+    &.green-border {
+      &:hover {
+        border-color: $green-border;
+      }
+    }
+
+    &.blue-border {
+      &:hover {
+        border-color: $blue-border;
+      }
+    }
+
+    &.yellow-border {
+      &:hover {
+        border-color: $yellow-border;
+      }
+    }
+  }
+}
+
+// Images
+.logo {
+  display: block;
+  margin: rem-calc(15 0);
+  padding: .5rem;
+
+  img {
+    filter: grayscale(100%);
+    transition: all 300ms;
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  &.client {
+    img {
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.livesoccer-back {
+    img {
+      &:not(:hover) {
+        content: url('/images/products/livesoccer-white.png');
+      }
+    }
+  }
+
+  &.phune-back {
+    img {
+      &:not(:hover) {
+        content: url('/images/products/phune-white.png');
+      }
+    }
+  }
+}
+
+// Maps
+.maps {
+  line-height: 0;
+
+  iframe {
+    border: 0;
+    height: 50vh;
+    pointer-events: none;
+    width: 100%;
+  }
+}
+
+// Animations
+main {
+  position: relative;
+}
+
+.hiding {
+  opacity: 0;
+}
+
+.showing {
+  opacity: 0;
+}
+
+// Utilities
+.technology {
+  & > * {
+    margin: 1rem;
+    white-space: pre;
+  }
+}
+
+.back-cover {
+  background-size: cover;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.radius {
+  border-radius: 4px;
+}
+
+@include breakpoint(medium) {
+  .medium-text-left {
+    text-align: inherit;
+  }
+}
+
+/////////////////////
+// ZURB Foundation //
+/////////////////////
+
+// Grid
+.column,
+.columns {
+  min-width: inherit;
+}
+
+// Carousel
+.orbit-container {
+  height: 40vh !important;
+
+  @include breakpoint(medium) {
+    height: 70vh !important;
+  }
+
+  .orbit-slide {
+    max-height: 100% !important;
+
+    &.expanded {
+      height: 100%;
+    }
+
+    .orbit-caption {
+      &.expanded {
+        height: 100%;
+
+        h1,
+        h2 {
+          margin: 0;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        h2 {
+          font-size: 28px;
+          font-weight: 500;
+        }
+
+        @include breakpoint(medium) {
+          h1 {
+            font-size: 72px;
+          }
+
+          h2 {
+            font-size: 56px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.no-js {
+  .orbit-slide {
+    &:not(.active) {
+      display: none;
+    }
+  }
+
+  .top-bar-right {
+    display: none;
+  }
+}

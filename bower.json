@@ -1,0 +1,13 @@
+{
+  "name": "ptech-www",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "~6.2.3",
+    "motion-ui": "~1.2.2",
+    "animate.css": "~3.5.2",
+    "font-awesome": "~4.6.3",
+    "technology-icons": "*",
+    "jsPlumb": "~2.1.4",
+    "waypoints": "~4.0.0"
+  }
+}

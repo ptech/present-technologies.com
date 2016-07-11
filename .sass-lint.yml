@@ -1,0 +1,11 @@
+options:
+  merge-default-rules: true
+rules:
+  indentation:
+    - 1
+    -
+      size: 2
+  nesting-depth: 0
+  no-ids: 0
+  no-mergeable-selectors: 0
+  no-transition-all: 0

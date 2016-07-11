@@ -1,0 +1,11 @@
+<RoutingRules>
+  <RoutingRule>
+    <Condition>
+      <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
+    </Condition>
+    <Redirect>
+      <HostName>www.present-technologies.com</HostName>
+      <ReplaceKeyWith></ReplaceKeyWith>
+    </Redirect>
+  </RoutingRule>
+</RoutingRules>
