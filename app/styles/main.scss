@@ -292,33 +292,35 @@ hr {
   img {
     filter: grayscale(100%);
     transition: all 300ms;
-
-    &:hover {
-      filter: none;
-    }
   }
 
   &.client {
     img {
       opacity: .5;
+    }
+  }
 
-      &:hover {
+  &:hover {
+    img {
+      filter: none;
+    }
+
+    &.client {
+      img {
         opacity: 1;
       }
     }
   }
 
-  &.livesoccer-back {
-    img {
-      &:not(:hover) {
+  &:not(:hover) {
+    &.livesoccer-back {
+      img {
         content: url('/images/products/livesoccer-white.png');
       }
     }
-  }
 
-  &.phune-back {
-    img {
-      &:not(:hover) {
+    &.phune-back {
+      img {
         content: url('/images/products/phune-white.png');
       }
     }
