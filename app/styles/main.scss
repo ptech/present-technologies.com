@@ -337,25 +337,25 @@ hr {
     }
   }
 
-  &:not(:hover) {
-    &.thunderpush-back {
-      img {
-        content: url('/images/products/thunderpush-white.svg');
-      }
-    }
-
-    &.phune-back {
-      img {
-        content: url('/images/products/phune-white.svg');
-      }
-    }
-
-    &.livesoccer-back {
-      img {
-        content: url('/images/products/livesoccer-white.svg');
-      }
-    }
-  }
+  // &:not(:hover) {
+  //   &.thunderpush-back {
+  //     img {
+  //       content: url('/images/products/thunderpush-white.svg');
+  //     }
+  //   }
+  //
+  //   &.phune-back {
+  //     img {
+  //       content: url('/images/products/phune-white.svg');
+  //     }
+  //   }
+  //
+  //   &.livesoccer-back {
+  //     img {
+  //       content: url('/images/products/livesoccer-white.svg');
+  //     }
+  //   }
+  // }
 }
 
 // Maps
