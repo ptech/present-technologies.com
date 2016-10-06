@@ -21,8 +21,9 @@ $ultra-light-gray: #f5f5f5;
 $ultra-dark-gray: #1b1716;
 $shadow-border: rgba($black, .5);
 $products-gray: #e5e5e5;
-$livesoccer: #f60;
+$thunderpush: #f39c11;
 $phune: #1b1464;
+$livesoccer: #f60;
 
 // Typography
 h1,
@@ -176,15 +177,21 @@ header {
     background-color: $blue-back;
   }
 
-  &.livesoccer-back {
+  &.thunderpush-back {
     &:hover {
-      background-color: $livesoccer;
+      background-color: $thunderpush;
     }
   }
 
   &.phune-back {
     &:hover {
       background-color: $phune;
+    }
+  }
+
+  &.livesoccer-back {
+    &:hover {
+      background-color: $livesoccer;
     }
   }
 }
@@ -300,6 +307,24 @@ hr {
     }
   }
 
+  &.product {
+    // line-height: rem-calc(196) - 2rem;
+    // padding: 1rem;
+    height: 0;
+    padding-bottom: 60%;
+    position: relative;
+    width: 100%;
+
+    img {
+      height: 100%;
+      left: 0;
+      padding: 0 1rem;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
   &:hover {
     img {
       filter: none;
@@ -313,15 +338,21 @@ hr {
   }
 
   &:not(:hover) {
-    &.livesoccer-back {
+    &.thunderpush-back {
       img {
-        content: url('/images/products/livesoccer-white.png');
+        content: url('/images/products/thunderpush-white.svg');
       }
     }
 
     &.phune-back {
       img {
-        content: url('/images/products/phune-white.png');
+        content: url('/images/products/phune-white.svg');
+      }
+    }
+
+    &.livesoccer-back {
+      img {
+        content: url('/images/products/livesoccer-white.svg');
       }
     }
   }
