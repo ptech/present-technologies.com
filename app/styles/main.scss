@@ -20,6 +20,7 @@ $yellow-border: #ffc95c;
 $ultra-light-gray: #f5f5f5;
 $ultra-dark-gray: #1b1716;
 $shadow-border: rgba($black, .5);
+$orbit-dark-back: rgba(0, 0, 0, .4);
 $products-gray: #e5e5e5;
 $thunderpush: #f39c11;
 $phune: #1b1464;
@@ -420,52 +421,67 @@ main {
 }
 
 // Carousel
-.orbit-container {
-  height: 40vh !important;
+.orbit {
+  max-height: 70vh; // limit the height to 70% of the viewport
+  position: relative;
 
-  @include breakpoint(medium) {
-    height: 70vh !important;
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%; // initial ratio of 16:9
   }
 
-  .orbit-slide {
-    max-height: 100% !important;
+  .orbit-container {
+    bottom: 0;
+    left: 0;
+    position:  absolute;
+    right: 0;
+    top: 0;
 
-    &.expanded {
-      height: 100%;
-    }
+    .orbit-slide {
+      // max-height: 100% !important;
 
-    &:not(.expanded) {
-      .orbit-caption {
-          background-color: rgba(0, 0, 0, 0.4);
-      }
-    }
-
-    .orbit-caption {
       &.expanded {
         height: 100%;
+      }
 
-        h1,
-        h2 {
-          margin: 0;
-        }
+      &.back-cover {
+        background-position: center center;
+      }
 
-        h1 {
-          font-size: 36px;
-        }
+      .orbit-caption {
+        &.expanded {
+          height: 100%;
 
-        h2 {
-          font-size: 28px;
-          font-weight: 500;
-        }
+          h1,
+          h2 {
+            margin: 0;
+          }
 
-        @include breakpoint(medium) {
           h1 {
-            font-size: 72px;
+            font-size: 36px;
           }
 
           h2 {
-            font-size: 56px;
+            font-size: 28px;
+            font-weight: 500;
           }
+
+          @include breakpoint(medium) {
+            h1 {
+              font-size: 72px;
+            }
+
+            h2 {
+              font-size: 56px;
+            }
+          }
+        }
+      }
+
+      &:not(.expanded) {
+        .orbit-caption {
+          background-color: $orbit-dark-back;
         }
       }
     }
