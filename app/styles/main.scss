@@ -434,6 +434,12 @@ main {
       height: 100%;
     }
 
+    &:not(.expanded) {
+      .orbit-caption {
+          background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
     .orbit-caption {
       &.expanded {
         height: 100%;
