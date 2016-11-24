@@ -422,7 +422,7 @@ main {
 
 // Carousel
 .orbit {
-  max-height: 70vh; // limit the height to 70% of the viewport
+  max-height: 80vh; // limit the height to 80% of the viewport
   position: relative;
 
   &::before {
@@ -433,13 +433,14 @@ main {
 
   .orbit-container {
     bottom: 0;
+    height: 100% !important;
     left: 0;
     position:  absolute;
     right: 0;
     top: 0;
 
     .orbit-slide {
-      // max-height: 100% !important;
+      max-height: 100% !important;
 
       &.expanded {
         height: 100%;
