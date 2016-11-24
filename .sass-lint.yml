@@ -7,5 +7,6 @@ rules:
       size: 2
   nesting-depth: 0
   no-ids: 0
+  no-important: 0
   no-mergeable-selectors: 0
   no-transition-all: 0
