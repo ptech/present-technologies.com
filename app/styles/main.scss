@@ -79,9 +79,9 @@ header {
     z-index: 1;
   }
 
-  .top-bar,
-  .title-bar {
-    @include breakpoint(medium) {
+  @include breakpoint(medium) {
+    .top-bar,
+    .title-bar {
       .top-bar-title,
       .title-bar-title {
         padding: .5rem 0;
@@ -101,8 +101,8 @@ header {
 }
 
 // Footer
-footer {
-  @include breakpoint(small only) {
+@include breakpoint(small only) {
+  footer {
     .small-12 {
       padding: rem-calc(10 0);
 
@@ -379,6 +379,21 @@ hr {
   //     }
   //   }
   // }
+}
+
+// Contacts
+#contacts {
+  .columns {
+    .row + .row {
+      padding-top: rem-calc(map-get($grid-column-gutter, 'small')) / 2;
+    }
+
+    @include breakpoint(small only) {
+      &:nth-child(n+2) {
+        padding-top: rem-calc(map-get($grid-column-gutter, 'small')) / 2;
+      }
+    }
+  }
 }
 
 // Maps
