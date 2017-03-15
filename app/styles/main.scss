@@ -79,16 +79,6 @@ header {
     z-index: 1;
   }
 
-  @include breakpoint(medium) {
-    .top-bar,
-    .title-bar {
-      .top-bar-title,
-      .title-bar-title {
-        padding: .5rem 0;
-      }
-    }
-  }
-
   .menu {
     &.vertical {
       padding-top: $topbar-padding;
