@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "foundation-sites": "~6.3.1",
-    "motion-ui": "~1.2.2",
+    "motion-ui": "~1.2.3",
     "animate.css": "~3.5.2",
     "font-awesome": "~4.7.0",
     "technology-icons": "*",

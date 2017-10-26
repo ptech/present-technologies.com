@@ -20,7 +20,8 @@ $shadow-border: rgba($black, .5);
 $orbit-dark-back: rgba(0, 0, 0, .4);
 $products-gray: #e5e5e5;
 $thunderpush: #f39c11;
-$phune: #1b1464;
+// $phune: #1b1464;
+$citizencard: #89c0db;
 $livesoccer: #f60;
 
 // Typography
@@ -196,9 +197,15 @@ header {
     }
   }
 
-  &.phune-back {
+  // &.phune-back {
+  //   &:hover {
+  //     background-color: $phune;
+  //   }
+  // }
+
+  &.citizencard-back {
     &:hover {
-      background-color: $phune;
+      background-color: $citizencard;
     }
   }
 
@@ -331,7 +338,7 @@ hr {
     img {
       height: 100%;
       left: 0;
-      padding: 0 1rem;
+      padding: 0 2rem;
       position: absolute;
       top: 0;
       width: 100%;
@@ -360,6 +367,12 @@ hr {
   //   &.phune-back {
   //     img {
   //       content: url('/images/products/phune-white.svg');
+  //     }
+  //   }
+  //
+  //   &.citizencard-back {
+  //     img {
+  //       content: url('/images/products/citizencard-white.svg');
   //     }
   //   }
   //
