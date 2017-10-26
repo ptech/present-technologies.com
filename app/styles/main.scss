@@ -56,11 +56,11 @@ address {
   text-transform: uppercase;
 }
 
-@include breakpoint(medium) {
-  .lead {
-    // font-size: $global-font-size * 1.25;
-  }
-}
+// @include breakpoint(medium) {
+//   .lead {
+//     font-size: $global-font-size * 1.25;
+//   }
+// }
 
 // Headings
 header {
