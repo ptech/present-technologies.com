@@ -20,7 +20,6 @@ $shadow-border: rgba($black, .5);
 $orbit-dark-back: rgba(0, 0, 0, .4);
 $products-gray: #e5e5e5;
 $thunderpush: #f39c11;
-// $phune: #1b1464;
 $citizencard: #89c0db;
 $livesoccer: #f60;
 
@@ -197,12 +196,6 @@ header {
     }
   }
 
-  // &.phune-back {
-  //   &:hover {
-  //     background-color: $phune;
-  //   }
-  // }
-
   &.citizencard-back {
     &:hover {
       background-color: $citizencard;
@@ -356,32 +349,6 @@ hr {
       }
     }
   }
-
-  // &:not(:hover) {
-  //   &.thunderpush-back {
-  //     img {
-  //       content: url('/images/products/thunderpush-white.svg');
-  //     }
-  //   }
-  //
-  //   &.phune-back {
-  //     img {
-  //       content: url('/images/products/phune-white.svg');
-  //     }
-  //   }
-  //
-  //   &.citizencard-back {
-  //     img {
-  //       content: url('/images/products/citizencard-white.svg');
-  //     }
-  //   }
-  //
-  //   &.livesoccer-back {
-  //     img {
-  //       content: url('/images/products/livesoccer-white.svg');
-  //     }
-  //   }
-  // }
 }
 
 // Contacts
